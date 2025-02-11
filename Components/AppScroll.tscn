@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0xwcpb46fqbu"]
+
+[ext_resource type="Texture2D" uid="uid://qguwb3440u43" path="res://Resources/Textures/BG.png" id="1_giwjh"]
+[ext_resource type="Script" path="res://GDS/AppScroll.gd" id="1_j4cqf"]
+[ext_resource type="Script" path="res://GDS/AppHolder.gd" id="3_eyswr"]
+
+[sub_resource type="Animation" id="Animation_iaxwq"]
+resource_name = "Colorful"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.0333333, 0.966667, 2, 3, 4.03333),
+"transitions": PackedFloat32Array(1.5, 1.5, 1.5, 1.5, 1.50562),
+"update": 0,
+"values": [Color(0.193316, 0.414417, 0.393762, 1), Color(0.2897, 0.353691, 0.590763, 1), Color(0.549179, 0.267981, 0.339927, 1), Color(0.420539, 0.365342, 0.224085, 1), Color(0.193316, 0.414417, 0.393762, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_45qhl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.193316, 0.414417, 0.393762, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tqexg"]
+_data = {
+"Colorful": SubResource("Animation_iaxwq"),
+"RESET": SubResource("Animation_45qhl")
+}
+
+[node name="AppScroll" type="Node2D"]
+script = ExtResource("1_j4cqf")
+
+[node name="Bg" type="Sprite2D" parent="."]
+modulate = Color(0.193316, 0.414417, 0.393762, 1)
+position = Vector2(490, 239)
+scale = Vector2(0.675, 0.675)
+texture = ExtResource("1_giwjh")
+
+[node name="ColorfulMotif" type="AnimationPlayer" parent="Bg"]
+libraries = {
+"": SubResource("AnimationLibrary_tqexg")
+}
+
+[node name="Beam" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.160784)
+position = Vector2(522, 214)
+scale = Vector2(0.83, 0.385)
+texture = ExtResource("1_giwjh")
+
+[node name="Button" type="Button" parent="."]
+show_behind_parent = true
+offset_left = -25.0
+offset_right = 1012.0
+offset_bottom = 438.0
+script = ExtResource("3_eyswr")
+
+[node name="AppHolder" type="BoxContainer" parent="Button"]
+top_level = true
+custom_minimum_size = Vector2(205, 271)
+layout_mode = 0
+offset_left = 67.0
+offset_top = 75.0
+offset_right = 307.0
+offset_bottom = 354.0
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
+[connection signal="gui_input" from="Button/AppHolder" to="Button/AppHolder" method="_on_gui_input"]

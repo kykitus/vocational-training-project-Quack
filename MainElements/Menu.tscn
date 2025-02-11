@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgjdsv4firgwf"]
+
+[ext_resource type="Texture2D" uid="uid://qguwb3440u43" path="res://Resources/Textures/BG.png" id="1_fq4vg"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2egf3"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+modulate = Color(0.176419, 0.176419, 0.176419, 0.584314)
+material = SubResource("CanvasItemMaterial_2egf3")
+position = Vector2(490, 213)
+scale = Vector2(0.64, 0.53)
+texture = ExtResource("1_fq4vg")

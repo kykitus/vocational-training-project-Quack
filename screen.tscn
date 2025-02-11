@@ -1,19 +1,12 @@
-[gd_scene format=3 uid="uid://baa5oh7ek4l0d"]
+[gd_scene load_steps=3 format=3 uid="uid://baa5oh7ek4l0d"]
+
+[ext_resource type="PackedScene" uid="uid://b0xwcpb46fqbu" path="res://Components/AppScroll.tscn" id="1_gpjag"]
+[ext_resource type="Resource" uid="uid://bf0yogef3s3fm" path="res://Resources/Data/AppMenuConfig.tres" id="2_3rykx"]
 
 [node name="Screen" type="Node2D"]
 
-[node name="Button" type="Button" parent="."]
-offset_left = 497.0
-offset_top = 192.0
-offset_right = 677.0
-offset_bottom = 272.0
-text = "Press Q 
-to Quack"
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(489, 221)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 391.0
-offset_top = 331.0
-offset_right = 849.0
-offset_bottom = 496.0
-theme_override_font_sizes/italics_font_size = 131
-text = "Łukasz to sigma"
+[node name="AppScroll" parent="." instance=ExtResource("1_gpjag")]
+config = ExtResource("2_3rykx")

@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="ControllerOptions" load_steps=2 format=3 uid="uid://b3d67kyekkq66"]
+
+[ext_resource type="Script" path="res://Resources/Data/ResourceClasses/ControllerOptions.gd" id="1_xipia"]
+
+[resource]
+script = ExtResource("1_xipia")

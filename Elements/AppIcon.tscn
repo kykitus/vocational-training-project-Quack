@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://djapuvoogjia1"]
+
+[ext_resource type="Script" path="res://GDS/AppIcon.gd" id="1_wt0bv"]
+[ext_resource type="Texture2D" uid="uid://c34mjewllfngl" path="res://icon.svg" id="2_3gepp"]
+
+[node name="AppIcon" type="Container"]
+custom_minimum_size = Vector2(205, 271)
+offset_right = 205.0
+offset_bottom = 271.0
+script = ExtResource("1_wt0bv")
+
+[node name="Node" type="Node2D" parent="."]
+
+[node name="Button" type="Button" parent="Node"]
+custom_minimum_size = Vector2(128, 160)
+offset_right = 205.0
+offset_bottom = 274.0
+
+[node name="Name" type="RichTextLabel" parent="Node"]
+offset_left = 1.0
+offset_top = 211.0
+offset_right = 204.0
+offset_bottom = 267.0
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]Name[/center]"
+autowrap_mode = 0
+
+[node name="Icon" type="Sprite2D" parent="Node"]
+texture_filter = 1
+position = Vector2(102.012, 101.987)
+scale = Vector2(1.59355, 1.59355)
+texture = ExtResource("2_3gepp")

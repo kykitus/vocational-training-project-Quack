@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="AppMenuConfig" load_steps=10 format=3 uid="uid://bf0yogef3s3fm"]
+
+[ext_resource type="Script" path="res://Resources/Data/ResourceClasses/AppIconInfoTemplate.gd" id="1_n05le"]
+[ext_resource type="Texture2D" uid="uid://c34mjewllfngl" path="res://icon.svg" id="2_57wc7"]
+[ext_resource type="Script" path="res://Resources/Data/ResourceClasses/AppMenuConfig.gd" id="2_hgvs3"]
+
+[sub_resource type="Resource" id="Resource_1ly2d"]
+script = ExtResource("1_n05le")
+Name = "Emil to Sigma"
+Icon = ExtResource("2_57wc7")
+App_path = "res://Resources/Data/Apps/app.tscn"
+
+[sub_resource type="Resource" id="Resource_1e6fo"]
+script = ExtResource("1_n05le")
+Name = "Toyota Supra"
+Icon = ExtResource("2_57wc7")
+App_path = "res://Resources/Data/Apps/app.tscn"
+
+[sub_resource type="Resource" id="Resource_7j85q"]
+script = ExtResource("1_n05le")
+Name = "Supra Bowl"
+Icon = ExtResource("2_57wc7")
+App_path = "res://Resources/Data/Apps/app.tscn"
+
+[sub_resource type="Resource" id="Resource_7ic2p"]
+script = ExtResource("1_n05le")
+Name = "Hoverboard Traffy"
+Icon = ExtResource("2_57wc7")
+App_path = "res://Resources/Data/Apps/app.tscn"
+
+[sub_resource type="Resource" id="Resource_8is26"]
+script = ExtResource("1_n05le")
+Name = "Statystyki"
+Icon = ExtResource("2_57wc7")
+App_path = "res://Resources/Data/Apps/app.tscn"
+
+[sub_resource type="Resource" id="Resource_0l5b6"]
+script = ExtResource("1_n05le")
+Name = "Ustawienia"
+Icon = ExtResource("2_57wc7")
+App_path = "res://Resources/Data/Apps/app.tscn"
+
+[resource]
+script = ExtResource("2_hgvs3")
+apps = Array[ExtResource("1_n05le")]([SubResource("Resource_1ly2d"), SubResource("Resource_1e6fo"), SubResource("Resource_7j85q"), SubResource("Resource_7ic2p"), SubResource("Resource_8is26"), SubResource("Resource_0l5b6")])
