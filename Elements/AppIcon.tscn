@@ -7,6 +7,7 @@
 custom_minimum_size = Vector2(205, 271)
 offset_right = 205.0
 offset_bottom = 271.0
+mouse_filter = 2
 script = ExtResource("1_wt0bv")
 
 [node name="Node" type="Node2D" parent="."]
@@ -15,12 +16,14 @@ script = ExtResource("1_wt0bv")
 custom_minimum_size = Vector2(128, 160)
 offset_right = 205.0
 offset_bottom = 274.0
+mouse_filter = 1
 
 [node name="Name" type="RichTextLabel" parent="Node"]
 offset_left = 1.0
 offset_top = 211.0
 offset_right = 204.0
 offset_bottom = 267.0
+mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
 text = "[center]Name[/center]"
@@ -31,3 +34,5 @@ texture_filter = 1
 position = Vector2(102.012, 101.987)
 scale = Vector2(1.59355, 1.59355)
 texture = ExtResource("2_3gepp")
+
+[connection signal="button_up" from="Node/Button" to="." method="_on_button_button_up"]

@@ -20,3 +20,7 @@ func setup(ref : AppIconResource) -> void:
 		$Node/Name.text = "[center]" + ref.Name + "[/center]"
 	$Node/Icon.texture = ref.Icon
 	AppPath = ref.App_path
+
+
+func _on_button_button_up() -> void:
+	print("Fuck You")
