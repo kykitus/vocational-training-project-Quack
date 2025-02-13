@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dysm3kcxsjfq6"]
+
+[ext_resource type="Script" path="res://Elements/DebugUsbReader.cs" id="1_4bnps"]
+[ext_resource type="Script" path="res://GDS/test.gd" id="2_0x7c8"]
+
+[node name="DebugUSBReader" type="Node2D"]
+script = ExtResource("1_4bnps")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 146.0
+offset_bottom = 40.0
+text = "SIGMA"
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("2_0x7c8")

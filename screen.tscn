@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://baa5oh7ek4l0d"]
+[gd_scene load_steps=4 format=3 uid="uid://baa5oh7ek4l0d"]
 
 [ext_resource type="PackedScene" uid="uid://b0xwcpb46fqbu" path="res://Components/AppScroll.tscn" id="1_gpjag"]
 [ext_resource type="Resource" uid="uid://bf0yogef3s3fm" path="res://Resources/Data/AppMenuConfig.tres" id="2_3rykx"]
+[ext_resource type="PackedScene" uid="uid://dysm3kcxsjfq6" path="res://Elements/DebugUsbReader.tscn" id="3_l72xx"]
 
 [node name="Screen" type="Node2D"]
 
@@ -10,3 +11,6 @@ position = Vector2(489, 221)
 
 [node name="AppScroll" parent="." instance=ExtResource("1_gpjag")]
 config = ExtResource("2_3rykx")
+
+[node name="DebugUSBReader" parent="." instance=ExtResource("3_l72xx")]
+position = Vector2(106, 30)
